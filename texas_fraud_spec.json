@@ -1,0 +1,178 @@
+{
+  "version": "1.0.0",
+  "research_date": "2025-12-26",
+  "source": "Grok research compilation",
+  "fraud_vectors": {
+    "operation_lone_star": {
+      "total_spent_usd": 11000000000,
+      "period": "2021-2025",
+      "contractors": [
+        {
+          "name": "Gothams",
+          "amount_usd": 65000000,
+          "contract_type": "emergency/no-bid",
+          "start_year": 2022,
+          "service": "border surveillance"
+        },
+        {
+          "name": "Wynne Transportation",
+          "amount_usd": 220000000,
+          "cost_per_passenger_usd": 1800,
+          "passengers": 120000,
+          "contract_type": "emergency",
+          "service": "migrant transport"
+        },
+        {
+          "name": "Various National Guard contractors",
+          "amount_usd": 5000000000,
+          "contract_type": "mixed",
+          "service": "deployment support"
+        }
+      ],
+      "fund_diversions": [
+        {
+          "source": "TDCJ prisons",
+          "destination": "Operation Lone Star",
+          "amount_usd": 359600000,
+          "year": 2022,
+          "impact": "prison understaffing, overtime crisis"
+        },
+        {
+          "source": "DPS general fund",
+          "destination": "Operation Lone Star",
+          "amount_usd": 1200000000,
+          "year": 2023,
+          "impact": "reduced highway patrol"
+        }
+      ],
+      "oversight_gaps": [
+        "No competitive bidding on emergency contracts",
+        "Limited legislative oversight",
+        "Contractor performance metrics not public"
+      ]
+    },
+    "pac_influence": {
+      "defend_texas_liberty": {
+        "tim_dunn_usd": 9700000,
+        "farris_wilks_usd": 4800000,
+        "total_usd": 14500000,
+        "scandal": "Nick Fuentes ties led to dissolution",
+        "dissolution_year": 2023,
+        "successor_pac": "Texans United for a Conservative Majority"
+      },
+      "texans_united": {
+        "cycle_2024_usd": 3000000,
+        "target": "Paxton impeachment supporters in primaries",
+        "strategy": "fund primary challengers against Republicans who voted to impeach",
+        "example_recipients": [
+          {
+            "name": "Mitch Little",
+            "amount_usd": 295000,
+            "target_incumbent": "Andrew Murr",
+            "district": "HD-53"
+          }
+        ]
+      },
+      "influence_pattern": {
+        "step_1": "Large donor gives to PAC",
+        "step_2": "PAC funds primary challenger",
+        "step_3": "Incumbent loses or capitulates",
+        "step_4": "Policy aligns with donor interests",
+        "correlation": "high"
+      }
+    },
+    "paxton_finances": {
+      "blind_trust": {
+        "disbursement_usd": 20000,
+        "recipients": ["Ken Paxton", "Angela Paxton"],
+        "purpose": "legal fees",
+        "unsealed_date": "2025-12-19"
+      },
+      "securities_fraud": {
+        "original_indictment_year": 2015,
+        "charges": "securities fraud",
+        "status": "pending as of 2025"
+      },
+      "impeachment": {
+        "year": 2023,
+        "outcome": "acquitted by Senate",
+        "vote": "16-15"
+      }
+    },
+    "colony_ridge": {
+      "development_name": "Colony Ridge",
+      "location": "Liberty County, Texas",
+      "foreclosure_rate": 0.30,
+      "national_average": 0.02,
+      "multiplier": 15,
+      "churning_pattern": {
+        "description": "properties sold 2-4+ times in 3 years",
+        "mechanism": "seller-financed loans, high interest, quick foreclosure"
+      },
+      "settlement": {
+        "date": "2025-12",
+        "terms": "undisclosed"
+      },
+      "vulnerable_population": "immigrants, low-income families",
+      "loan_terms": {
+        "down_payment_percent": 5,
+        "interest_rate_percent": 12,
+        "term_years": 30
+      }
+    },
+    "tsu_probe": {
+      "institution": "Texas Southern University",
+      "unauthorized_invoices_estimate_usd": "hundreds_of_millions",
+      "unauthorized_invoices_min_usd": 100000000,
+      "unauthorized_invoices_max_usd": 500000000,
+      "audit_delays": {
+        "fy2023": {
+          "delay_months": 10,
+          "reason": "vendor disputes"
+        },
+        "fy2024": {
+          "delay_months": 4,
+          "reason": "ongoing investigation"
+        }
+      },
+      "probe_details": {
+        "ordered_by": "Governor Abbott",
+        "ordered_date": "2025-11",
+        "investigating_agency": "Texas State Auditor"
+      },
+      "political_timing": {
+        "observation": "Probe announced amid budget negotiations",
+        "prior_relationship": "TSU leadership endorsed opponent"
+      }
+    },
+    "igt_lottery": {
+      "company": "IGT (International Game Technology)",
+      "contract": "Texas Lottery Systems",
+      "fine_usd": 180000,
+      "violation": "prohibited political contributions",
+      "violation_details": {
+        "recipient_type": "legislative caucuses",
+        "prohibited_because": "state contractor contribution ban"
+      },
+      "year": 2024
+    }
+  },
+  "detection_thresholds": {
+    "emergency_contract_donor_correlation": 0.5,
+    "high_fraud_probability": 0.7,
+    "pac_capture_threshold": 0.8,
+    "predatory_foreclosure_multiplier": 7.5,
+    "churning_period_years": 3,
+    "churning_min_sales": 2,
+    "fund_diversion_min_usd": 10000000
+  },
+  "scenario_thresholds": {
+    "baseline_detection": 0.95,
+    "stress_alpha": 0.70,
+    "stress_pressure": 0.50,
+    "genesis_min_watchers": 1,
+    "genesis_autocatalysis": 5,
+    "colony_ridge_churn": 0.90,
+    "fund_diversion": 0.85
+  }
+}
