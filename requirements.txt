@@ -1,0 +1,14 @@
+# TexasProof Dependencies
+
+# Core
+numpy>=1.21.0
+
+# Optional: BLAKE3 hashing (fallback to SHA256 if not available)
+blake3>=0.3.0; platform_system != "Windows"
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development (optional)
+ruff>=0.1.0

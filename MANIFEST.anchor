@@ -1,0 +1,70 @@
+{
+  "glyph_type": "anchor",
+  "id": "texasproof-v1.0",
+  "ts": "2025-12-26T00:00:00Z",
+  "version": "1.0.0",
+  "purpose": "Texas Political Fraud Detection Monte Carlo Simulation",
+  "components": {
+    "spec": "spec.md",
+    "ledger_schema": "ledger_schema.json",
+    "fraud_data": "texas_fraud_spec.json",
+    "cli": "cli.py",
+    "core_modules": [
+      "src/core.py",
+      "src/entropy.py",
+      "src/ols_contractor_proof.py",
+      "src/pac_influence_proof.py",
+      "src/predatory_lending_proof.py",
+      "src/tsu_probe_proof.py",
+      "src/paxton_trust_proof.py",
+      "src/lottery_proof.py",
+      "src/watcher.py",
+      "src/genesis.py",
+      "src/sim.py",
+      "src/scenarios.py",
+      "src/dashboards.py"
+    ],
+    "tests": [
+      "tests/test_core.py",
+      "tests/test_ols_contractor.py",
+      "tests/test_pac_influence.py",
+      "tests/test_predatory_lending.py",
+      "tests/test_sim_scenarios.py",
+      "tests/test_self_spawn.py"
+    ],
+    "gates": [
+      "gate_t2h.sh",
+      "gate_t24h.sh",
+      "gate_t48h.sh"
+    ]
+  },
+  "fraud_vectors": {
+    "operation_lone_star": "$11B+ emergency contracts",
+    "pac_influence": "$14M+ Dunn/Wilks donations",
+    "colony_ridge": "30% foreclosure (15x national)",
+    "tdcj_diversion": "$359.6M shifted from prisons",
+    "tsu_probe": "Hundreds of millions unauthorized",
+    "igt_lottery": "$180K fine for prohibited contributions"
+  },
+  "scenarios": [
+    "baseline: OLS contractor detection ≥95%",
+    "stress: PAC under pressure, α ≥0.70",
+    "genesis: Self-spawn watchers from wounds",
+    "colony_ridge: Predatory lending churn ≥90%",
+    "fund_diversion: Budget shift detection ≥85%",
+    "godel: Edge cases, graceful failure"
+  ],
+  "slos": {
+    "detection_rate": ">= 0.95",
+    "resilience_alpha": ">= 0.70",
+    "churn_detection": ">= 0.90",
+    "fund_diversion": ">= 0.85"
+  },
+  "triad_integration": {
+    "agentproof": "Every transaction emits receipts",
+    "axiom": "Fraud resists compression (high MDL)",
+    "neuron": "Resilience under political disruption"
+  },
+  "hash": "COMPUTE_ON_SAVE",
+  "status": "READY_TO_SHIP"
+}
